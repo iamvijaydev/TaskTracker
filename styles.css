@@ -9,15 +9,20 @@ body {
   font-family: sans-serif;
   min-width: 314px;
   overflow-x: hidden;
-  padding-top: 44px;
 }
 
 ul {
    list-style: none;
 }
 
+body > section {
+  max-width: 314px;
+  margin: auto;
+  position: relative;
+}
+
 #accept_task {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   width: 294px;
@@ -29,17 +34,20 @@ ul {
   color: #222224;
   background-color: #fff;
   border-radius: 0 0 3px 3px;
+}  
+
+#task_list {
+  padding-top: 44px;
 }
 
 #task_list li {
   padding: 10px 10px 10px 0;
-  border-bottom: 1px solid #ece6cb;
   overflow: hidden;
   position: relative;
 }
 
-#task_list li:last-child {
-  border-bottom: 0;
+#task_list li:not(:last-child) {
+  border-bottom: 1px solid #ece6cb;
 }
 
 #task_list li.active {
@@ -80,14 +88,14 @@ ul {
 
 #task_list li[data-status = "active"] .duration {
   background-color: #f56e41;
-  background-position: 0 -85px;
+  background-position: 0 -86px;
   color: #fff;
   display: block;
 }
 
 #task_list li[data-status = "pause"] .duration {
   background-color: #f4ca48;
-  background-position: 1px -102px;
+  background-position: 1px -103px;
   color: #62511d;
   display: block;
 }
@@ -198,11 +206,25 @@ li[data-status = "pause"] .ctrls .complete {
   float: right;
 }
 
-
 .ctrls .start {
   font-size: 11px;
 }
 
 .ctrls .discard {
   font-size: 17px;
+}
+
+
+@media all and (min-width: 800px) {
+  body {
+    padding-top: 100px;
+  }
+
+  #accept_task {
+    border-radius: 3px;
+  }
+
+  #task_list li:only-child {
+    border-bottom: 1px solid #ece6cb;
+  }
 }
