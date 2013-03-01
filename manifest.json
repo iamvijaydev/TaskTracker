@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+
+  "name": "Task Tracker",
+  "description": "Track the time spent on your tasks",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "taskTracker.html"
+  }
+}
