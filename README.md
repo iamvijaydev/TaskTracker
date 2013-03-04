@@ -4,8 +4,8 @@ TaskTracker - a Google Chrome plugin
 A small utility to track time spent on your tasks
 
 
-How to use it as Google Chrome plugin
-=====================================
+How to use it as a Google Chrome plugin
+=======================================
 
 1. Download the project files as zip or pull it. Unzip and save it to your desired folder.
 2. Open Google Chrome and click on the options icon on the far right side of the address bar.
